@@ -1,0 +1,29 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Gill Sans Extrabold, sans-serif;
+  font-size: 15px;
+}
+
+body {
+  background: #C3F7AF;
+}
+
+.Layout__header {
+  margin: auto;
+}
+.Layout__main {
+  padding-top: 55px;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  border: 1px transparent;
+}
+.Layout__profile {
+  box-sizing: content-box;
+  border: 1px transparent;
+}
+
+/*# sourceMappingURL=layout.css.map */
