@@ -1,0 +1,21 @@
+.post{
+  &__wrapper{
+    width: 100%;
+    background: white;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  &__text{
+
+  }
+
+  &__author{
+    font-size: 15px;
+  }
+  &__created{
+    font-size: 10px;
+    color: gray;
+  }
+}

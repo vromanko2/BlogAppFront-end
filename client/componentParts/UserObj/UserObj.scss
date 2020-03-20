@@ -1,0 +1,17 @@
+.user{
+  &__wrapper{
+    border-radius: 10px;
+    background: white;
+    margin-bottom: 30px;
+    padding: 15px;
+  }
+  &__subscribe{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    background: #C3F7AF;
+    font-size: 12px;
+  }
+}

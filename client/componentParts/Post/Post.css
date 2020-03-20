@@ -1,0 +1,16 @@
+.post__wrapper {
+  width: 100%;
+  background: white;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 15px;
+}
+.post__author {
+  font-size: 15px;
+}
+.post__created {
+  font-size: 10px;
+  color: gray;
+}
+
+/*# sourceMappingURL=Post.css.map */
