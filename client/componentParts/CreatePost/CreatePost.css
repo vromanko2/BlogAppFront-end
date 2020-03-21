@@ -1,13 +1,29 @@
-create-post__wrapper {
+.create-post__wrapper {
   border: 1px solid white;
   border-radius: 15px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
 }
-create-post__input {
+.create-post__input {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
+}
+.create-post__button {
+  border: 3px solid white;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  background: green;
+  font-size: 25px;
+  width: 50%;
+  align-self: center;
 }
 
 /*# sourceMappingURL=CreatePost.css.map */
