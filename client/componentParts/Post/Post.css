@@ -5,12 +5,22 @@
   padding: 20px;
   border-radius: 15px;
 }
+.post__title {
+  padding: 3px 20px;
+}
+.post__text {
+  background: lightgray;
+  padding: 20px;
+  border-radius: 15px;
+}
 .post__author {
   font-size: 15px;
+  padding: 3px 20px;
 }
 .post__created {
   font-size: 10px;
   color: gray;
+  padding: 3px 20px;
 }
 
 /*# sourceMappingURL=Post.css.map */

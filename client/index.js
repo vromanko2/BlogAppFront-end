@@ -34,7 +34,22 @@ const deleteItems = () => {
     removeElementsByClass('user__wrapper');
     removeElementsByClass('create-post__wrapper');
     removeElementsByClass('post__wrapper');
+    removeElementsByClass('news_feed__message');
+};
 
+
+
+
+async function OnSubscribeButtonClick () {
+    let index = this.id;
+    let data = {
+        'username': document.getElementsByClassName('user__username')[index].innerHTML,
+        'id': document.getElementsByClassName('user__id')[index].innerHTML
+    };
+
+    let res = await axios.put(backend_url + 'user/' + sample_data['id'] + '/subscribe/', data);
+    console.log(res);
+    getUserNewsFeed();
 };
 
 const getAllUsers = async (e) => {
@@ -48,14 +63,20 @@ const getAllUsers = async (e) => {
     });
     let jsonResponse = await response.json();
     let i = 0;
-    // console.log(jsonResponse)
     jsonResponse.forEach(elem => {
         let post = document.getElementsByClassName('post__wrapper')[0];
-        // LayoutMain.removeChild(post);
         LayoutMain.appendChild(UserObj());
-        document.getElementsByClassName('user__username')[i].innerHTML = elem['username'];
+        let username = document.getElementsByClassName('user__username')[i];
+        username.id = "user__username_" + i;
+        username.innerHTML = elem['username'];
+        let id = document.getElementsByClassName('user__id')[i];
+        id.id = "user__id_" + i;
+        id.innerHTML = elem['id'];
+        let button = document.getElementsByClassName('user__subscribe')[i];
+        button.id = i;
+        button.addEventListener('click', OnSubscribeButtonClick);
         i++
-    })
+    });
 };
 
 
@@ -65,7 +86,6 @@ async function onCreatePostButtonClick(e) {
         'text': document.getElementsByClassName('create-post__input')[1].value
     };
     let res = await axios.post(backend_url + 'user/' + sample_data['id'] + '/create_post/', data);
-    console.log(res)
     getUserNewsFeed();
 };
 
@@ -95,8 +115,15 @@ async function getUserNewsFeed() {
         document.getElementsByClassName('post__created')[i].innerHTML = "Created at: " + elem['created_at'];
         i++;
     })
+    if(data.length === 0){
+        LayoutMain.innerHTML = `
+            <h2 class="news_feed__message" style="text-align: center; background: white; padding: 15px; border-radius: 15px">No posts yet! Subscribe on somebody!</h2>
+        `;
+    }
 
 };
+
+
 
 
 getUserNewsFeed();

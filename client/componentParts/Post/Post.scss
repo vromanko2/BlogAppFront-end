@@ -6,16 +6,23 @@
     padding: 20px;
     border-radius: 15px;
   }
-
+  &__title{
+    padding: 3px 20px;
+    //text-align: center;
+  }
   &__text{
-
+    background: lightgray;
+    padding: 20px;
+    border-radius: 15px;
   }
 
   &__author{
     font-size: 15px;
+    padding: 3px 20px;
   }
   &__created{
     font-size: 10px;
     color: gray;
+    padding: 3px 20px;
   }
 }

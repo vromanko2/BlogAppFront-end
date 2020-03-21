@@ -3,6 +3,9 @@ const UserObj = () => {
     container.className = 'user__wrapper';
     container.innerHTML = `
         <h2 class="user__username"></h2>
+        <span class="user__id-text">User id: </span>
+        <span class="user__id"></span>
+        <p></p>
         <button class="user__subscribe">Subscribe</button>
     `;
 
