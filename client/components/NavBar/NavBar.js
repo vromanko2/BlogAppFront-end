@@ -11,8 +11,8 @@ const NavBar = () => {
             </a>
             <div class="nav-bar__navigation">
                 <a><div class="nav-bar__home">Main page</div></a>
-                <a><div class="nav-bar__profile">Profile</div></a>
-                <a><div class="nav-bar__about">All users</div></a>
+                <a><div class="nav-bar__post-create">Create a post</div></a>
+                <a><div class="nav-bar__users">All users</div></a>
             </div>
         </div>`;
     return container;

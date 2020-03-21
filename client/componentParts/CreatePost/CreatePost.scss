@@ -1,0 +1,13 @@
+create-post{
+  &__wrapper{
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 20px;
+  }
+  &__input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+}

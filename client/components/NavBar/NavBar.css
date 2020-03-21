@@ -26,7 +26,7 @@
   align-items: center;
   flex-direction: row;
 }
-.nav-bar__home, .nav-bar__profile, .nav-bar__about {
+.nav-bar__home, .nav-bar__post-create, .nav-bar__profile, .nav-bar__users {
   margin: 15px;
   padding: 15px 30px;
   background: white;
